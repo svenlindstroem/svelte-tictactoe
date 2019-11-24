@@ -1,7 +1,7 @@
 <script>
   import Cell from "./Cell.svelte";
 
-  // initial
+  // initial values are ''
   let values = Array(9).fill("");
   const winningLine = [
     [0, 1, 2],
@@ -20,8 +20,6 @@
   let winner = "";
   let winningArray = undefined; // undefined or array
 
-  //$: console.log(ct, winningArray);
-
   function turnFunc(e) {
     const id = e.target.id;
 
@@ -30,7 +28,7 @@
       return;
     }
     ct++;
-    // set 'x' or 'o'
+    // set 'x' or 'o' in values
     values[id] = currentPlayer;
     getWinner();
   }
@@ -46,7 +44,6 @@
 
   function getWinner() {
     winningArray = winningLine.find(function(v, index, arr) {
-      console;
       const w = [values[v[0]], values[v[1]], values[v[2]]].join("");
 
       if (w === "xxx") {
@@ -93,6 +90,7 @@
 </style>
 
 <main>
+  <div>Add To Home</div>
   {#if !winner}
     <h1>It's your turn player: {currentPlayer}</h1>
   {/if}
