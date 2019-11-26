@@ -7,7 +7,8 @@ var filesToCache = [
   "/build/bundle.js",
   "/manifest.json",
   "favicon-32x32.png",
-  "favicon-16x16.png"
+  "favicon-16x16.png",
+  "android-chrome-192x192.png"
 ];
 
 /* Start the service worker and cache all of the app's content */
