@@ -33,7 +33,7 @@
   }
 
   function logAppInstalled(evt) {
-    console.log("Weather App was installed.", evt);
+    console.log("Tic Tac Toe was installed.", evt);
   }
 </script>
 
