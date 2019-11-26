@@ -1,4 +1,5 @@
 <script>
+  import Install from "./Install.svelte";
   import Cell from "./Cell.svelte";
 
   // initial values are ''
@@ -90,7 +91,7 @@
 </style>
 
 <main>
-  <div>Add To Home</div>
+  <Install />
   {#if !winner}
     <h1>It's your turn player: {currentPlayer}</h1>
   {/if}
