@@ -72,20 +72,21 @@
 
   h1 {
     color: #ff3e00;
-    font-size: 4em;
+    font-size: 5vw;
     font-weight: 100;
   }
 
   @media (min-width: 640px) {
     main {
       max-width: none;
-      border: 1px solid;
     }
   }
-  .clear {
-    clear: both;
+
+  button {
+    font-size: 2vw;
+  }
+  .row-container {
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 </style>
@@ -98,21 +99,20 @@
   {#if winner}
     <h1>And the winner is: {winner}</h1>
     <p>
-      <button on:click={reset}>Reset</button>
+      <button on:click={reset}>Play again!</button>
     </p>
   {/if}
-  <div class="clear">
+  <div class="row-container">
     <Cell id={0} {turnFunc} value={values[0]} {winningArray} />
     <Cell id={1} {turnFunc} value={values[1]} {winningArray} />
     <Cell id={2} {turnFunc} value={values[2]} {winningArray} />
   </div>
-  <div class="clear">
+  <div class="row-container">
     <Cell id={3} {turnFunc} value={values[3]} {winningArray} />
     <Cell id={4} {turnFunc} value={values[4]} {winningArray} />
     <Cell id={5} {turnFunc} value={values[5]} {winningArray} />
   </div>
-
-  <div class="clear">
+  <div class="row-container">
     <Cell id={6} {turnFunc} value={values[6]} {winningArray} />
     <Cell id={7} {turnFunc} value={values[7]} {winningArray} />
     <Cell id={8} {turnFunc} value={values[8]} {winningArray} />

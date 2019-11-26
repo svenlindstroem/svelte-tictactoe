@@ -37,6 +37,12 @@
   }
 </script>
 
+<style>
+  button {
+    font-size: 2vw;
+  }
+</style>
+
 <div>
   <button id="buttonInstall" aria-label="Install" hidden>Install</button>
 </div>
